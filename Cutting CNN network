@@ -1,0 +1,11 @@
+# Below code for cutting the orignal (train) CNN network depend on the .prototxt file using caffe for Python
+
+import caffe
+
+myPathLoad = 'xyz' # Path to the orignal files to be load
+myPathStore = 'abc' # Path to location toy need to save your files
+
+caffe.set_mode_cpu()
+
+netModel = caffe.Net(myPathLoad + '/deploy.prototxt'), myPathLoad + '/OrignalCaffeFile.caffemodel', caffe.TEST)
+netModel.save(myPathStore + '/NewCaffeFile.caffemodel')
