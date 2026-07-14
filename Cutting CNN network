@@ -1,4 +1,3 @@
-###
 # Below code for cutting the orignal (trained) CNN network depend on the .prototxt file using caffe for Python
 
 import caffe
